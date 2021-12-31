@@ -9,6 +9,10 @@
 
     <!-- Store bean -->
     <bean id="StudentDao" class="ir.maktab.dao.StudentDao" />
+    <bean id="StudentService" class="ir.maktab.service.StudentService">
+        <property name="StudentDao" ref="StudentDao"/>
+    </bean>
+
     <!-- Order bean with dependencies -->
     <!--<bean id="order" class="com.knpcode.SpringProject.Order">
         <constructor-arg ref="store" />
