@@ -22,7 +22,7 @@ public class Main {
                 new ClassPathXmlApplicationContext("applicationContext.xml");
 
         // by name
-        StudentDao studentDao = (StudentDao) context.getBean("StudentDao");
+        StudentDao studentDao = (StudentDao) context.getBean("studentDao");
         System.out.println("******* studentDao context getBean by name");
         studentDao.delete();
 
@@ -32,7 +32,7 @@ public class Main {
         studentDao1.save();
 
         // with student service
-        StudentService studentService = (StudentService) context.getBean("StudentService");
+        StudentService studentService = (StudentService) context.getBean("studentService");
         System.out.println("******* studentService context getBean by name");
         studentService.saveNewStudent();
 
