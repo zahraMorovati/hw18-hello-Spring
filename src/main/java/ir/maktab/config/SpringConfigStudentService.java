@@ -5,10 +5,9 @@ import ir.maktab.service.StudentService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
-
-@Import(value = {SpringConfig1.class})
+@Import(value = {SpringConfigStudentDao.class})
 @Configuration
-public class SpringConfig2 {
+public class SpringConfigStudentService {
 
     @Bean
     public StudentService studentService(StudentDao studentDao){
