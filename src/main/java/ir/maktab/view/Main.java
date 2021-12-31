@@ -1,6 +1,7 @@
 package ir.maktab.view;
 
-import ir.maktab.config.SpringConfig;
+import ir.maktab.config.SpringConfig1;
+import ir.maktab.config.SpringConfig2;
 import ir.maktab.dao.StudentDao;
 import ir.maktab.service.StudentService;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -36,9 +37,11 @@ public class Main {
         System.out.println("******* studentService context getBean by name");
         studentService.saveNewStudent();
 
-        AnnotationConfigApplicationContext context1 = new AnnotationConfigApplicationContext(SpringConfig.class);
+        // 2 configs related
+        AnnotationConfigApplicationContext context1 = new AnnotationConfigApplicationContext(SpringConfig1.class);
+        AnnotationConfigApplicationContext context2 = new AnnotationConfigApplicationContext(SpringConfig2.class);
         studentDao= (StudentDao) context1.getBean("studentDao");
-        studentService= (StudentService) context1.getBean("studentService");
+        studentService= (StudentService) context2.getBean("studentService");
 
         System.out.println("******* spring class get bean");
         studentDao.save();
