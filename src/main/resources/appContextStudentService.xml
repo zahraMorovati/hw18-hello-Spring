@@ -8,10 +8,9 @@
           http://www.springframework.org/schema/context/spring-context.xsd">
 
     <!--imports-->
-    <!--<import resource="applicationContext1.xml"/>-->
+    <import resource="appContextStudentDao.xml"/>
 
     <!-- Store bean -->
-    <bean id="studentDao" class="ir.maktab.dao.StudentDao" />
     <bean id="studentService" class="ir.maktab.service.StudentService">
         <property name="studentDao" ref="studentDao"/>
     </bean>
