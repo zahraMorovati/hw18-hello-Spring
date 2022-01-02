@@ -1,5 +1,6 @@
 package ir.maktab.dao;
 
+import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
 //@Primary
 @Component
